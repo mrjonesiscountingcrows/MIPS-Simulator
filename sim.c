@@ -1,3 +1,11 @@
+/*
+Team Members:   1. Tapan Tandon	
+		2. Salvador A Cartagena
+		3. Santosh Pandey
+*/
+
+
+
 #include <stdio.h>
 #include "shell.h"
 
@@ -8,6 +16,7 @@ int msb=0;
 int MSB_rs=0;
 int MSB_rt=0;
 
+// Defining structure for storing the decoded instructions and registers
 typedef struct Rtype
 {
     uint32_t rs;
@@ -34,7 +43,7 @@ struct Itype I;
 struct Jtype J;
 uint32_t a=4;
 
-
+// A function for sign extension based on number of bits 
 uint32_t extension(uint32_t temp,int length)
 {
         // shift to get MSB
