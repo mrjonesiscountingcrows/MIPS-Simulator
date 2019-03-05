@@ -324,12 +324,17 @@ void execute()
     }
 
     // J-Type Jump Instuction
+	
+	else if (opcode == 2)
+	{
+	NEXT_STATE.PC = J.address;
+	}
 
-    else if (opcode ==2 || opcode==3)
-    {
-        NEXT_STATE.PC=J.address;
-
-    }
+	else if (opcode == 3)
+	{
+	NEXT_STATE.REGS[31] = NEXT_STATE.PC;
+	NEXT_STATE.PC = J.address;
+	}
 
     // I-Type addi Instruction
 
